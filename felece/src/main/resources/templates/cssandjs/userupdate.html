@@ -1,0 +1,46 @@
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>FELECE ALIŞTIRMA - 3</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link th:href="@{/styles/cssandjs/admin.css}" rel="stylesheet" />
+
+        <script type="text/javascript" th:src="@{/js/cssandjs/admin.js}"></script>
+      </head>
+
+    <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+
+        <div id="tabulation" class="list">
+            <a href="/"><div id="list-back"><i class="fas fa-3x fa-chevron-left"></i></div></a>
+            <table>
+                <th>TODO</th>
+                <th>DURUM</th>
+                <tr th:each="todo: ${todos}">
+ 
+                    <form th:action="@{/updateTodo}" method="post">
+                    <td><input type="text" th:value="${todo.getTodo()}" name=todo></td>
+                    <td>
+                            <input type="radio" name="status" value="beklemede" checked>
+                            <label>Beklemede</label>
+                            <input type="radio" name="status" value="ertelendi">
+                            <label>Ertelendi</label>
+                            <input type="radio" name="status" value="tamamlandı">
+                            <label>Tamamlandı</label>
+                            <input type="hidden" name="todoid" th:value="${todo.getId()}" />
+                            <input type="submit" value="GÜNCELLE" class="btn btn-danger" />
+                    </td>    
+                    </form>
+                </tr>
+            </table>
+        </div>
+
+
+
+
+</body>
+<script type="text/javascript" th:src="@{/js/cssandjs/admin.js}"></script>
+</body>
+</html>

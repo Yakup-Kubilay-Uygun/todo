@@ -1,0 +1,47 @@
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>FELECE ALIŞTIRMA - 3</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ 
+        <link th:href="@{/styles/cssandjs/user.css}" rel="stylesheet" />
+        <script type="text/javascript" th:src="@{/js/cssandjs/user.js}"></script>
+      </head>
+
+    <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+        <div id="user-information"><div id="logout"><a href="/logout">ÇIKIŞ YAP</a></div></div>
+        <div id="user-operations">
+            <ul>
+                <li><div id="addTODO"><a href="#">TODO Ekle</a></div></li>
+                <li><a href="/deleteTodo">TODO Sil</a></li>
+                <li><a href="/updateTodo">TODO Güncelle</a></li>
+                <li><a href="/listTodo">TODO Listele</a></li>
+            </ul>
+        </div>
+
+        <form method="POST" action="addTodo">
+        <div id="addition" class="add">
+            <a href="#"><div id="add-back"><i class="fas fa-3x fa-chevron-left"></i></div></a>
+            <ul>
+                <li><label>TODO</label></li><li><input type="text" id="addition-text" name="todo" required></li>
+                <li><input type="radio" name="status" th:value="beklemede" checked>
+                    <label>Beklemede</label>
+                    <input type="radio" name="status" th:value="ertelendi">
+                    <label>Ertelendi</label>
+                    <input type="radio" name="status" th:value="tamamlandı">
+                    <label>Tamamlandı</label></li>
+                <li><input type="submit" value="KAYDET"></li>
+            </ul>
+        </div>
+        </form>
+
+
+
+</body>
+<script type="text/javascript" th:src="@{/js/cssandjs/user.js}"></script>
+</body>
+</html>

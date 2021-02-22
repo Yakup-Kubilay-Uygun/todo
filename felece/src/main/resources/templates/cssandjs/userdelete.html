@@ -1,0 +1,41 @@
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>FELECE ALIŞTIRMA - 3</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+ 
+        <link th:href="@{/styles/cssandjs/user.css}" rel="stylesheet" />
+        <script type="text/javascript" th:src="@{/js/cssandjs/user.js}"></script>
+      </head>
+
+    <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+        <div id="tabulation" class="list">
+            <a href="/"><div id="list-back"><i class="fas fa-3x fa-chevron-left"></i></div></a>
+            <table>
+                <th>TODO</th>
+                <th></th>
+                <tr th:each="todo: ${todos}">
+                    
+                    <td th:text="${todo.getTodo()}"></td>
+                    <td>
+                        <form th:action="@{deleteTodo}" method="post">
+                            <input type="hidden" name="todoId" th:value="${todo.getId()}" />
+                            <input type="submit" value="SİL" class="btn btn-danger" />
+                        </form>
+                    </td>
+                    
+
+                </tr>
+            </table>
+        </div>
+
+
+
+</body>
+<script type="text/javascript" th:src="@{/js/cssandjs/user.js}"></script>
+</body>
+</html>

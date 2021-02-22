@@ -1,0 +1,85 @@
+a{
+    text-decoration:none;
+}
+
+#user-information{
+   height: 40px;
+   margin-bottom: 5px; 
+   background-color: red;
+}
+#user-information #logout{
+    padding-top: 10px;
+    padding-left: 20px;
+    font: bold 20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+}
+#user-information #logout a{
+    color: white;
+}
+#user-operations{
+    height: 50px;
+    background-color: red;
+                  
+  }
+#user-operations ul li{
+    width: 25%;
+    list-style:none;
+    float: left;
+    color: black;
+
+}
+#user-operations ul li a{
+   
+    display: block;
+    color: white;
+    margin-top: 15px;
+    font: bold 20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+}
+
+.add{
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: rgb(221, 82, 82);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+#addition ul li{
+    list-style:none;
+    text-align: center;
+    width: 100%;
+    float: left;
+    font: bold 20px 'lucida sans', 'trebuchet MS', 'Tahoma';
+    color: black;
+
+}
+#addition #addition-text{
+    width: 40%;
+    height: 35px;
+}
+#addition #add-back{
+    float: right;;
+    color:white;
+    margin-right:20px;
+    margin-top:15px;
+}
+
+
+#tabulation th, td {
+    border: 1px solid black;
+    background-color: white;
+    text-align: center;
+    width: 20%;
+    height: 50px;
+}
+
+#tabulation #list-back{
+    float: right;;
+    color:red;
+    margin-right:20px;
+    margin-top:15px;
+}

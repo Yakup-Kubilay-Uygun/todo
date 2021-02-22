@@ -1,0 +1,48 @@
+<html lang="tr">
+    <head>
+        <meta charset="UTF-8">
+        <title>FELECE ALIŞTIRMA - 3</title>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+        <link th:href="@{/styles/cssandjs/admin.css}" rel="stylesheet" />
+
+        <script type="text/javascript" th:src="@{/js/cssandjs/admin.js}"></script>
+      </head>
+
+    <body>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+    
+        <div id="admin-information"><div id="logout"><a href="/logout">Çıkış Yap</a></div></div>
+        <div id="admin-operations">
+            <ul>
+                <li><div id="addUser"><a href="#">Kullanıcı Ekle</a></div></li>
+                <li><div id="listUser"><a href="/list">Kullanıcı Sil</a></div></li>
+                <li><div id="updateUser"><a href="/update">Kullanıcı Güncelle</a></div></li>
+                <li><a href="/listUser">Kullanıcı Todolarını Listele</a></li>
+            </ul>
+        </div>
+        
+        <form method="POST" action="add">
+        <div id="addition" class="add">
+            <a href="#"><div id="add-back"><i class="fas fa-3x fa-chevron-left"></i></div></a>
+            <ul>
+                <li><label>E-Mail</label></li><li><input type="text" id="addition-text" name="email" required></li>
+                <li><label>Kullanıcı Adı</label></li><li><input type="text" id="addition-text" name="username" required></li>
+                <li><label>Şifre</label></li><li><input type="text" id="addition-text" name="password" required></li>
+                <li><input type="radio" name="role" value="ADMIN">
+                    <label>ADMIN</label>
+                    <input type="radio" name="role" value="USER" checked>
+                    <label>USER</label></li>
+                <li><input type="submit" value="KAYDET"></li>
+            </ul>
+        </div>
+        </form>
+
+
+
+
+</body>
+<script type="text/javascript" th:src="@{/js/cssandjs/admin.js}"></script>
+</body>
+</html>
